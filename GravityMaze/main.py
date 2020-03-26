@@ -1,10 +1,9 @@
 import pygame as py
-import random as rand
 from GravityMaze.GravityGame import GravityGame
 from GravityMaze.Screen import Screen
 
 SCREEN_WIDTH = 1440
-SCREEN_HEIGHT = 1080
+SCREEN_HEIGHT = 1000
 
 
 def process_events():
@@ -17,7 +16,7 @@ def run_game():
     py.init()
     py.display.set_caption("Gravity Maze")
     window = py.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-    gravity_game = GravityGame()
+    gravity_game = GravityGame(18, 9)
     screen = Screen(window, SCREEN_HEIGHT, SCREEN_WIDTH)
     clock = py.time.Clock()
     while True:
